@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
         "usage" : "/YOUR-USERNAME",
         "example" : `${req.hostname}/billypentester`
     }
+    res.header('Content-type', 'application/json');
     res.json(out)
 })
 
@@ -91,6 +92,7 @@ app.get('/:name', (req, res) => {
     
         var trigger = async(header) => {
             var result = await header
+            res.header('Content-type', 'application/json');
             res.json(result)
         } 
 
