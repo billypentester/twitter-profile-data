@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
         "usage" : "/YOUR-USERNAME",
         "example" : `${req.hostname}/billypentester`
     }
-    res.header('Content-type', 'application/json');
+    res.header('Content-type', 'application/json', Access-Control-Allow-Origin: *);
     res.json(out)
 })
 
